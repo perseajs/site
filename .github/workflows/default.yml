@@ -1,0 +1,19 @@
+name: Default workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.9.1
+      - run: yarn add now@latest
+      - run: yarn now --prod --token=$NOW_TOKEN
+        env:
+          NOW_TOKEN: ${{secrets.now_token}}
