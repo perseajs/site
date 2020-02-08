@@ -66,6 +66,11 @@
 		max-width: 48em;
 		margin: 0 auto;
 	}
+
+	footer {
+		text-align: center;
+		margin: 2rem 0;
+	}
 </style>
 
 <svelte:head>
@@ -146,3 +151,7 @@ hello world`.trim()}
 		</pre>
 	<div>
 </section>
+
+<footer>
+	<span>🥑</span>
+</footer>
