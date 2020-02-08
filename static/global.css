@@ -9,7 +9,7 @@ body {
 	font-family: 'IBM Plex Mono', monospace;
 	font-size: 14px;
 	line-height: 1.5;
-	color: #333;
+	color: #000;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,17 +26,14 @@ a {
 	color: inherit;
 }
 
-code {
-	font-family: menlo, inconsolata, monospace;
-	font-size: calc(1em - 2px);
-	color: #555;
-	background-color: #f0f0f0;
-	padding: 0.2em 0.4em;
-	border-radius: 2px;
-}
-
 @media (min-width: 400px) {
 	body {
 		font-size: 16px;
 	}
+}
+
+pre {
+	font-family: 'IBM Plex Mono', monospace;
+	margin: 0;
+	padding: 1rem;
 }

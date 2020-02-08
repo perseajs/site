@@ -25,8 +25,10 @@
 	}
 
 	.terminal {
-		border: 1px solid #ddd;
-		border-radius: 5px;
+		/* border: 1px solid #ddd; */
+		border-radius: 3px;
+		box-shadow:  10px 10px 20px #e3e3e3,
+             -10px -10px 20px #ffffff;
 	}
 	.terminal-topbar {
 		content: '';
@@ -45,11 +47,11 @@
 		border-radius: 100%;
 		margin-right: 0.5rem;
 	}
-	pre {
-		font-family: 'IBM Plex Mono', monospace;
-		margin: 0;
-		padding: 1rem;
+	.code {
 		background: #fff;
+		box-shadow:  10px 10px 20px #e3e3e3,
+             -10px -10px 20px #ffffff;
+		margin-bottom: 2rem;
 	}
 
 	section {
@@ -58,7 +60,7 @@
 		margin: 0 auto;
 	}
 	section:nth-child(even) {
-		background: #fcfcfc;
+		background: #fdfdfd;
 	}
 	.section-content {
 		max-width: 48em;
@@ -86,8 +88,8 @@
 				<div class="terminal-topbar-button"></div>
 				<div class="terminal-topbar-button"></div>
 			</div>
-			<pre>
-$ yarn persea dev
+		<pre>
+{`$ yarn persea dev
 Master 70423 is running
 Worker 70424 started
 Worker 70425 started
@@ -96,8 +98,8 @@ Worker 70427 started
 Worker 70428 started
 Worker 70429 started
 Worker 70430 started
-Worker 70431 started
-			</pre>
+Worker 70431 started`.trim()}
+		</pre>
 		</div>
 	</div>
 </section>
@@ -105,14 +107,18 @@ Worker 70431 started
 <section>
 	<div class="section-content">
 		<h2>Get Started</h2>
-		<pre>
-$ # Step 1: install
-$ yarn add persea
-$ # OR
-$ npm install persea
+		<p>1. Install</p>
+		<pre class="code">
+{`
+	$ yarn add @persea/persea
+	$ # OR
+	$ npm install @persea/persea
+`.trim()}
+		</pre>
 
-$ # Step 2: run
-$ yarn persea dev
+		<p>2. Run</p>
+		<pre class="code">
+{`$ yarn persea dev
 Master 70423 is running
 Worker 70424 started
 Worker 70425 started
@@ -121,21 +127,22 @@ Worker 70427 started
 Worker 70428 started
 Worker 70429 started
 Worker 70430 started
-Worker 70431 started
+Worker 70431 started`.trim()}
+		</pre>
 
-$ # Step 3: from another terminal, create an endpoint
-$ mkdir routes
-$ echo "{`
-module.exports.index = () => {
-	response.send({ body: 'hello world' });
-};
-`}" > routes/foo.js
+		<p>3. Add a route</p>
+		<pre class="code">
+{`$ mkdir routes
+$ echo "module.exports.index = () =>
+	response.send({ body: 'hello world' });" > routes/foo.js
 $ # The master process should notice this new file and restart the workers
-$ # with the new code
+$ # with the new code`.trim()}
+		</pre>
 
-$ # Step 4: ...
-$ curl http://localhost:8080/foo
-hello world
+		<p>4. See it in action</p>
+		<pre class="code">
+{`$ curl http://localhost:8080/foo
+hello world`.trim()}
 		</pre>
 	<div>
 </section>
