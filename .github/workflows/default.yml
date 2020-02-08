@@ -14,6 +14,6 @@ jobs:
         with:
           node-version: 12.9.1
       - run: yarn add now@latest
-      - run: yarn now --prod --token=$NOW_TOKEN
+      - run: yarn now -c --prod --token=$NOW_TOKEN
         env:
           NOW_TOKEN: ${{secrets.now_token}}
