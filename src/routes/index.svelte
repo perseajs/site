@@ -115,10 +115,11 @@ Worker 70431 started`.trim()}
 		<h2>Features</h2>
 		<ul>
 			<li>Isolated context per-request</li>
-			<li>Route auto-discovery</li>
+			<li>Automatic routing</li>
 			<li>Simple middleware</li>
 			<li>Hot-reloading out of the box in development</li>
 			<li>Self-healing workers</li>
+			<li>TypeScript support</li>
 		</ul>
 	</div>
 </section>
