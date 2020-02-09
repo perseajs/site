@@ -70,6 +70,7 @@
 	footer {
 		text-align: center;
 		margin: 2rem 0;
+		filter: grayscale(1);
 	}
 </style>
 
@@ -111,13 +112,26 @@ Worker 70431 started`.trim()}
 
 <section>
 	<div class="section-content">
+		<h2>Features</h2>
+		<ul>
+			<li>Isolated context per-request</li>
+			<li>Route auto-discovery</li>
+			<li>Simple middleware</li>
+			<li>Hot-reloading out of the box in development</li>
+			<li>Self-healing workers</li>
+		</ul>
+	</div>
+</section>
+
+<section>
+	<div class="section-content">
 		<h2>Get Started</h2>
 		<p>1. Install</p>
 		<pre class="code">
 {`
-	$ yarn add @persea/persea
-	$ # OR
-	$ npm install @persea/persea
+$ yarn add @persea/persea
+$ # OR
+$ npm install @persea/persea
 `.trim()}
 		</pre>
 
